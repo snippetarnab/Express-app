@@ -10,6 +10,7 @@ const route = express.Router();
 
 route.post("/add", createEmployee);
 route.get("/allemp", getAllEmployee);
-
+route.put("/update/:id", updateEmployee);
+route.delete("/delete/:id", deleteEmployee);
 
 export default route;

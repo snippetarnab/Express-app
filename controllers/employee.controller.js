@@ -44,7 +44,7 @@ export async function updateEmployee(req, res) {
     if (!employeeExist) {
       return res.status(404).json({ message: "Employee not found" });
     }
-    const updateEmployee = await Employee.findByIdAndUpdate(id, rq.body, {
+    const updateEmployee = await Employee.findByIdAndUpdate(id, req.body, {
       new: true,
     });
     res.status(200).json(updateEmployee);
